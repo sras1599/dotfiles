@@ -33,10 +33,17 @@ end
 return packer.startup(function(use)
   use "wbthomason/packer.nvim" -- Have packer manage itself
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use 'folke/tokyonight.nvim'
 
+  -- LSP
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
+  use "tamago324/nlsp-settings.nvim"
+  use "jose-elise-alvarez/null-ls.nvim"
+              
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
-    require("packer").sync()
+   require("packer").sync()
   end
 end)

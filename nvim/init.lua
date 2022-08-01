@@ -1,3 +1,5 @@
 require("user.options")
 require("user.plugins")
 require("user.treesitter")
+require("user.colorscheme")
+require("user.lsp")
