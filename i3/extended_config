@@ -15,3 +15,9 @@ bindsym XF86AudioPlay exec playerctl play-pause
 
 # default stacking
 workspace_layout stacking
+
+# overriding key bindings
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+h workspace prev
+bindsym $mod+l workspace next

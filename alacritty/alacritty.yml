@@ -1,0 +1,11 @@
+import:
+  - ~/.config/alacritty/color_schemes.yml
+
+font:
+  size: 8
+shell:
+  program: /usr/bin/zsh
+  args:
+    - -l
+    - -c
+    - "tmux -u"
