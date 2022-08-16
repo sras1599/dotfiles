@@ -15,7 +15,7 @@ icons = "awesome6"
 
 [[block]]
 block = "music"
-format = "$combo.str(20) $prev $play $next|"
+format = "$combo.rot-str(30) $prev $play $next|"
 player = "spotify"
 
 [[block]]
