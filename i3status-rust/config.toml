@@ -1,17 +1,8 @@
 [theme]
 theme = "nord-dark"
 
-[theme.overrides]
-#info_bg = "#66390C"
-#idle_bg = "#525252"
-#warning_bg = "#E6D965"
-#good_bg = "#BD7EB8"
-#critical_bg = "#FF0000"
-#alternating_tint_bg = "#40235E"
-
 [icons]
 icons = "awesome6"
-
 
 [[block]]
 block = "music"
@@ -19,18 +10,18 @@ format = "$combo.rot-str(25) $prev $play $next|"
 player = "spotify"
 
 [[block]]
-block = "cpu"
-interval = 1
-
-[[block]]
-block = "battery"
-
-[[block]]
 block = "sound"
 
 [[block]]
 block = "backlight"
 device = "intel_backlight"
+
+[[block]]
+block = "cpu"
+interval = 1
+
+[[block]]
+block = "battery"
 
 [[block]]
 block = "time"

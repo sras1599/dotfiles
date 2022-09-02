@@ -21,3 +21,5 @@ bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+h workspace prev
 bindsym $mod+l workspace next
+bindsym --release Print exec flameshot full -p ~/Pictures/
+bindsym --release Shift+Print exec flameshot gui -p ~/Pictures/
