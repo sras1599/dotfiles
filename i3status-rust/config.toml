@@ -4,8 +4,12 @@ icons = "awesome6"
 
 [[block]]
 block = "music"
-format = "$combo.rot-str(25) $prev $play $next|"
+format = "{combo}"
+buttons = ["prev", "play", "next"]
 player = "spotify"
+marquee_speed = 0.25
+marquee_interval = 5
+dynamic_width = true
 
 [[block]]
 block = "sound"
