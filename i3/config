@@ -184,7 +184,7 @@ bindsym $mod+r mode "resize"
 bar {
         font pango:DejaVu Sans Mono, Font Awesome 6 Free 14px
         position top
-        status_command /usr/bin/i3status-rs ~/.config/i3status-rust/config.toml
+        status_command ~/.cargo/bin/i3status-rs ~/.config/i3status-rust/config.toml
         colors {
                 focused_workspace #B54545 #B54545 #FFFFFF
                 background #303030

@@ -1,8 +1,8 @@
 bindsym $mod+F9 exec ~/.config/i3/toggle_sink.sh
 
 # enable natural scrolling(325) and tapping(346) for the touchpad
-exec --no-startup-id xinput set-prop 12 325 1
-exec --no-startup-id xinput set-prop 12 346 1
+exec --no-startup-id xinput set-prop 11 325 1
+exec --no-startup-id xinput set-prop 11 346 1
 
 # enable media keys
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 

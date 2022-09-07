@@ -1,7 +1,5 @@
-[theme]
 theme = "nord-dark"
 
-[icons]
 icons = "awesome6"
 
 [[block]]
