@@ -102,7 +102,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-source ~/.zsh/themes/geometry/geometry.zsh
+source ~/.oh-my-zsh/custom/themes/geometry/geometry.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/variables.zsh
 
