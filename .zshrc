@@ -83,7 +83,6 @@ plugins=(
     kubectl
     rust
     slugify
-    zsh-256color
 )
 
 source $ZSH/oh-my-zsh.sh

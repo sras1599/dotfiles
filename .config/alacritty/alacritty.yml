@@ -2,6 +2,9 @@ import:
   - ~/.config/alacritty/color_schemes.yml
 
 font:
+  normal:
+    family: SF Mono
+    style: Regular
   size: 10
 shell:
   program: /usr/bin/zsh
@@ -9,3 +12,5 @@ shell:
     - -l
     - -c
     - "tmux -u"
+env:
+  TERM: xterm-256color
