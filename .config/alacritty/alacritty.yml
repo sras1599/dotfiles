@@ -14,3 +14,9 @@ shell:
     - "tmux -u"
 env:
   TERM: screen-256color
+cursor:
+  style:
+    shape: Beam
+    blinking: On
+  blink_interval: 600
+  thickness: 0.75
