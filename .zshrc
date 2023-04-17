@@ -1,6 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 path+=('/opt/bin')
+path+=('/usr/local/go/bin')
 export PATH
 
 # Path to your oh-my-zsh installation.
@@ -19,6 +20,9 @@ plugins=(
     rust
     slugify
 )
+
+# load zsh completions
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 # source .oh-my-zsh and custom files
 source $ZSH/oh-my-zsh.sh
