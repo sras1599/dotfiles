@@ -20,3 +20,5 @@ cursor:
     blinking: On
   blink_interval: 600
   thickness: 0.75
+window:
+  dynamic_padding: true
