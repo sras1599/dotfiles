@@ -321,6 +321,7 @@ alias gupom='git pull --rebase origin $(git_main_branch)'
 alias gupomi='git pull --rebase=interactive origin $(git_main_branch)'
 alias glum='git pull upstream $(git_main_branch)'
 alias gluc='git pull upstream $(git_current_branch)'
+alias glud='git pull upstream $(git_develop_branch)'
 
 alias gwch='git whatchanged -p --abbrev-commit --pretty=medium'
 alias gwip='git add -A; git rm $(git ls-files --deleted) 2> /dev/null; git commit --no-verify --no-gpg-sign --message "--wip-- [skip ci]"'
