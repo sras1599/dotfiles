@@ -1,5 +1,0 @@
-{
-    "yaml.schemas": {
-        "https://raw.githubusercontent.com/distinction-dev/alacritty-schema/main/alacritty/reference.json": "file:///home/raspreet/code/dotfiles/.config/alacritty/alacritty.yml"
-    }
-}
