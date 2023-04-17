@@ -13,6 +13,10 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 bindsym XF86AudioPlay exec playerctl play-pause
 
+# media controls for Spotify
+bindsym $mod+F2 exec ~/.config/i3/spotify_volume.sh -5%
+bindsym $mod+F3 exec ~/.config/i3/spotify_volume.sh +5%
+
 # default stacking
 workspace_layout stacking
 
