@@ -6,3 +6,4 @@ alias cpulow="echo powersave | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/sca
 alias logout="pkill -KILL -u $USER"
 
 alias ungit="rm -rf .git .github"
+alias python="ipython"
