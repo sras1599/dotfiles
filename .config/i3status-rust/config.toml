@@ -1,15 +1,13 @@
+[theme]
 theme = "nord-dark"
 
+[icons]
 icons = "awesome6"
 
 [[block]]
 block = "music"
-format = "{combo}"
-buttons = ["prev", "play", "next"]
+format = "$icon $combo $prev $play $next |"
 player = "spotify"
-marquee_speed = 0.25
-marquee_interval = 5
-dynamic_width = true
 
 [[block]]
 block = "sound"
@@ -27,5 +25,6 @@ block = "battery"
 
 [[block]]
 block = "time"
-interval = 5
-format = "%a %d/%m %R"
+[block.format]
+full = " $icon $timestamp.datetime(f:'%a %d-%m-%Y %R') "
+
