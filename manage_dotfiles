@@ -1,0 +1,72 @@
+#!/usr/bin/zsh
+
+# Path to the dotfiles directory
+DOTFILES_DIR="$( cd "$( dirname "${0}" )" && pwd )"
+
+# Default target directory (current user's home)
+TARGET_DIR=$HOME
+
+# Exception list
+SCRIPT_NAME=$(basename $0)
+EXCEPTION_LIST=".git .config $SCRIPT_NAME"
+
+# Function to display usage
+usage() {
+    echo "Usage: ${0} [OPTION] [TARGET_DIR]"
+    echo "  -i, --install    Install the dotfiles to the TARGET_DIR (default: current user's home directory)"
+    echo "  -u, --uninstall  Uninstall the dotfiles from the TARGET_DIR"
+    echo "  -h, --help       Display this help message"
+}
+
+# Function to delete specific configurations
+delete_configs() {
+    for ITEM in $(ls -A $DOTFILES_DIR); do
+        if [[ " $EXCEPTION_LIST " =~ " $ITEM " ]]; then
+            continue
+        fi
+        rm -rf "$TARGET_DIR/$ITEM"
+    done
+
+    # Handle .config directory selectively
+    for SUBDIR in $(ls -A $DOTFILES_DIR/.config); do
+        rm -rf "$TARGET_DIR/.config/$SUBDIR"
+    done
+}
+
+# Function to stow everything
+install_configs() {
+    stow -v -R -t $TARGET_DIR -d $DOTFILES_DIR .
+}
+
+# Function to unstow everything
+uninstall_configs() {
+    stow -v -D -t $TARGET_DIR -d $DOTFILES_DIR .
+}
+
+# Parse command line arguments
+while [[ "$#" -gt 0 ]]; do
+    case $1 in
+        -i|--install) ACTION="install";;
+        -u|--uninstall) ACTION="uninstall";;
+        -h|--help) usage; exit 0;;
+        *) TARGET_DIR="$1";;
+    esac
+    shift
+done
+
+# Take action based on the flag provided
+case $ACTION in
+    "install")
+        delete_configs
+        install_configs
+        ;;
+    "uninstall")
+        uninstall_configs
+        ;;
+    *)
+        usage
+        exit 1
+        ;;
+esac
+
+echo "Action '$ACTION' completed for target directory: $TARGET_DIR"
