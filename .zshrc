@@ -1,3 +1,5 @@
+ZSH_DISABLE_COMPFIX=true
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 path+=('/opt/bin')
@@ -32,3 +34,9 @@ source ~/.zsh/variables.zsh
 
 setopt noautoremoveslash
 setopt nocaseglob
+
+# Created by `pipx` on 2023-09-20 00:05:59
+export PATH="$PATH:/home/raspreet/.local/bin"
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

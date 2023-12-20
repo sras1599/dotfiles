@@ -7,3 +7,7 @@ alias logout="pkill -KILL -u $USER"
 
 alias ungit="rm -rf .git .github"
 alias python="ipython"
+
+alias copy="xclip -se c"
+
+alias dvo="devcontainer open"

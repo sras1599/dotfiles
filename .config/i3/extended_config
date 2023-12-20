@@ -4,6 +4,8 @@ bindsym $mod+F9 exec ~/.config/i3/toggle_sink.sh
 exec --no-startup-id xinput set-prop 10 312 1
 exec --no-startup-id xinput set-prop 10 339 1
 
+exec --no-startup-id dunst
+
 # enable media keys
 bindsym XF86MonBrightnessDown exec brightnessctl set 5%- 
 bindsym XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -27,3 +29,4 @@ bindsym $mod+h workspace prev
 bindsym $mod+l workspace next
 bindsym --release Print exec flameshot full -p ~/Pictures/
 bindsym --release Shift+Print exec flameshot gui -p ~/Pictures/
+

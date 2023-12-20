@@ -134,12 +134,12 @@ if (( $zcompdump_refresh )) \
   # See https://github.com/ohmyzsh/ohmyzsh/commit/dd1a7269#commitcomment-39003489
   tee -a "$ZSH_COMPDUMP" &>/dev/null <<EOF
 
+
 $zcompdump_revision
 $zcompdump_fpath
 EOF
 fi
 unset zcompdump_revision zcompdump_fpath zcompdump_refresh
-
 # zcompile the completion dump file if the .zwc is older or missing.
 if command mkdir "${ZSH_COMPDUMP}.lock" 2>/dev/null; then
   zrecompile -q -p "$ZSH_COMPDUMP"

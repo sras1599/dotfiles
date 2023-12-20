@@ -612,7 +612,7 @@ elif [[ -n "$ZSH_VERSION" ]]; then
     # than using bashcompinit to reuse the bash code but really this wasn't
     # a hassle to write
     autoload -Uz compinit
-    compinit
+    compinit -u
 
     function _apparix_file() {
         IFS=$'\n'
