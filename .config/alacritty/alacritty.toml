@@ -1,0 +1,26 @@
+import = ["/home/raspreet/.config/alacritty/color_schemes.toml"]
+
+[cursor]
+blink_interval = 600
+thickness = 0.75
+
+[cursor.style]
+blinking = "On"
+shape = "Beam"
+
+[env]
+TERM = "screen-256color"
+
+[font]
+size = 10
+
+[font.normal]
+family = "SFMono Nerd Font Mono"
+style = "Regular"
+
+[shell]
+args = ["-l", "-c", "tmux -u"]
+program = "/usr/bin/zsh"
+
+[window]
+dynamic_padding = true

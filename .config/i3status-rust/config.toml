@@ -13,16 +13,9 @@ player = "spotify"
 block = "sound"
 
 [[block]]
-block = "backlight"
-device = "intel_backlight"
-
-[[block]]
 block = "cpu"
 interval = 1
-
-[[block]]
-block = "battery"
-
+ 
 [[block]]
 block = "time"
 [block.format]
