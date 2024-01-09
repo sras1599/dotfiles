@@ -35,7 +35,7 @@ delete_configs() {
 
 # Function to stow everything
 install_configs() {
-    stow -v -R -t $TARGET_DIR -d $DOTFILES_DIR .
+    stow -v -R --ignore='^manage_dotfiles$' -t $TARGET_DIR -d $DOTFILES_DIR .
 }
 
 # Function to unstow everything
