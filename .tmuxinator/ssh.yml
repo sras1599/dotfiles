@@ -1,0 +1,23 @@
+name: ssh
+root: ~/
+
+windows:
+  - devtest:
+      layout: even-horizontal
+      panes:
+        - devtest:
+          - ssh devtest
+          - kubectl -n vsmaps logs -f cairo-cairo-0
+        - cairo_on_devtest:
+          - ssh devtest
+          - kubectl -n vsmaps exec -it cairo-cairo-0 -- /bin/bash
+  - qa:
+      layout: even-horizontal
+      panes:
+        - qa:
+          - ssh qa
+          - kubectl -n vsmaps logs -f cairo-cairo-0
+        - cairo_on_qa:
+          - ssh qa
+          - kubectl -n vsmaps exec -it cairo-cairo-0 -- /bin/bash
+

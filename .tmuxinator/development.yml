@@ -1,0 +1,24 @@
+name: development
+root: ~/
+
+windows:
+  - cairo:
+      root: ~/code/cairo
+      layout: even-horizontal
+      panes:
+        - cairo:
+          - clear
+          - dvo .
+        - vu_auth_provider:
+          - cd vu_auth_provider
+          - clear
+  - vsmaps:
+      root: ~/code/vsmaps
+      layout: even-horizontal
+      panes:
+        - vsmaps:
+          - clear
+        - vsmaps_core:
+          - cd core
+          - clear
+
