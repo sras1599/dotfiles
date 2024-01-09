@@ -9,3 +9,5 @@ alias copy="xclip -se c"
 alias dvo="devcontainer open"
 
 alias sus="systemctl suspend -i"
+
+alias ts="tmuxinator start"
