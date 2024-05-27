@@ -1,4 +1,4 @@
-import = ["/home/raspreet/.config/alacritty/color_schemes.toml"]
+import = ["~/.config/alacritty/color_schemes.toml"]
 
 [cursor]
 blink_interval = 600
@@ -12,10 +12,10 @@ shape = "Beam"
 TERM = "screen-256color"
 
 [font]
-size = 10
+size = 9
 
 [font.normal]
-family = "SFMono Nerd Font Mono"
+family = "SF Mono"
 style = "Regular"
 
 [shell]
