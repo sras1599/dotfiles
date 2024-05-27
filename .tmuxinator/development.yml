@@ -14,11 +14,14 @@ windows:
           - clear
   - vsmaps:
       root: ~/code/vsmaps
-      layout: even-horizontal
+      layout: tiled
       panes:
         - vsmaps:
           - clear
-        - vsmaps_core:
-          - cd core
+        - vsmaps:
+          - clear
+        - vsmaps:
+          - clear
+        - vsmaps:
           - clear
 
