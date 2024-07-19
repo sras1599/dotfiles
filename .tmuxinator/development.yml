@@ -20,12 +20,16 @@ windows:
           - clear
         - vsmaps:
           - clear
-  - vsmaps_2:
-      root: ~/code/vsmaps
-      layout: tiled
-      panes:
         - vsmaps:
           - clear
         - vsmaps:
+          - clear
+  - clickhouse:
+      root: ~/code/vsmaps/core/clickhouse
+      layout: even-horizontal
+      panes:
+        - clickhouse:
+          - clear
+        - clickhouse:
           - clear
 
