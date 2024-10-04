@@ -18,7 +18,14 @@ windows:
       panes:
         - vsmaps:
           - clear
-        - vsmaps_core:
-          - cd core
+        - vsmaps:
+          - clear
+  - clickhouse:
+    root: ~/code/vsmaps/core/clickhouse
+    layout: even-horizontal
+    panes:
+      - clickhouse:
+          - clear
+      - clickhouse:
           - clear
 

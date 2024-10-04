@@ -1,4 +1,4 @@
-import = ["/home/raspreet/.config/alacritty/color_schemes.toml"]
+import = ["~/.config/alacritty/color_schemes.toml"]
 
 [cursor]
 blink_interval = 600
