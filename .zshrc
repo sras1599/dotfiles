@@ -26,6 +26,14 @@ plugins=(
 # load zsh completions
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
+# Load custom files from ~/.zshrc.d
+CUSTOM_DIR="$HOME/.zshrc.d"
+if [ -d "$CUSTOM_DIR" ]; then
+    for file in "$CUSTOM_DIR"/*.zsh; do
+        [ -f "$file" ] && source "$file"
+    done
+fi
+
 # source .oh-my-zsh and custom files
 source $ZSH/oh-my-zsh.sh
 source ~/.oh-my-zsh/custom/themes/geometry/geometry.zsh
