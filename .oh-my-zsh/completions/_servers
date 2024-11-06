@@ -1,0 +1,11 @@
+#compdef servers
+
+_servers() {
+  # Read server names from ~/.ssh/config, excluding entries containing "github"
+  local -a server_list
+  server_list=($(awk '/^Host / { if ($2 !~ /github/ && $2 != "*") print $2 }' ~/.ssh/config))
+
+  # Use `_arguments` to define the expected structure of the `servers` function
+  _arguments \
+    '1: :{_describe "server" server_list}'  # Complete with server names for the first argument
+}
