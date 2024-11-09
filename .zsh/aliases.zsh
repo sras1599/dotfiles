@@ -12,7 +12,4 @@ alias sus="systemctl suspend -i"
 
 alias ts="tmuxinator start"
 
-# overrides
-alias dcup="dcup --watch"
-alias dcupd="dcupd --watch"
 
