@@ -11,5 +11,4 @@ alias dvo="devcontainer open"
 alias sus="systemctl suspend -i"
 
 alias ts="tmuxinator start"
-
-
+alias code="code-insiders"
