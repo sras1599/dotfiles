@@ -40,6 +40,10 @@ source ~/.oh-my-zsh/custom/themes/geometry/geometry.zsh
 source ~/.zsh/aliases.zsh
 source ~/.zsh/variables.zsh
 
+if [[ -f /usr/share/fzf/key-bindings.zsh ]]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+
 setopt noautoremoveslash
 setopt nocaseglob
 
