@@ -6,7 +6,7 @@ alias ungit="rm -rf .git .github"
 
 alias copy="xclip -se c"
 
-alias dvo="devcontainer open"
+alias dvo="devcontainer-insiders open"
 
 alias sus="systemctl suspend -i"
 
