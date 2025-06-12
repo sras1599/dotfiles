@@ -35,12 +35,28 @@ delete_configs() {
 
 # Function to stow everything
 install_configs() {
-    stow -v -R --ignore='^manage_dotfiles$' -t $TARGET_DIR -d $DOTFILES_DIR .
+    stow -v -R --ignore='(manage_dotfiles|user_specific_config)' -t $TARGET_DIR -d $DOTFILES_DIR .
+
+    # User-specific config
+    USERNAME=$(whoami)
+    USER_SPECIFIC_DIR="$DOTFILES_DIR/user_specific_config/$USERNAME"
+    if [ -d "$USER_SPECIFIC_DIR" ]; then
+        echo "Installing user-specific config for $USERNAME from $USER_SPECIFIC_DIR"
+        stow -v -R -t $TARGET_DIR -d "$DOTFILES_DIR/user_specific_config/$USERNAME" .
+    fi
 }
 
 # Function to unstow everything
 uninstall_configs() {
     stow -v -D -t $TARGET_DIR -d $DOTFILES_DIR .
+
+    # Unstow user-specific config if present
+    USERNAME=$(whoami)
+    USER_SPECIFIC_DIR="$DOTFILES_DIR/user_specific_config/$USERNAME"
+    if [ -d "$USER_SPECIFIC_DIR" ]; then
+        echo "Uninstalling user-specific config for $USERNAME from $USER_SPECIFIC_DIR"
+        stow -v -D -t $TARGET_DIR -d "$DOTFILES_DIR/user_specific_config/$USERNAME" .
+    fi
 }
 
 # Parse command line arguments
