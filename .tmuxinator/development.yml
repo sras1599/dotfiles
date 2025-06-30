@@ -21,11 +21,11 @@ windows:
         - vsmaps:
           - clear
   - clickhouse:
-    root: ~/code/vsmaps/core/clickhouse
-    layout: even-horizontal
-    panes:
-      - clickhouse:
-          - clear
-      - clickhouse:
-          - clear
+      root: ~/code/vsmaps/core/clickhouse
+      layout: even-horizontal
+      panes:
+        - clickhouse:
+            - clear
+        - clickhouse:
+            - clear
 
