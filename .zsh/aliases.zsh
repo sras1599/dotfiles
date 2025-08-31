@@ -12,3 +12,5 @@ alias sus="systemctl suspend -i"
 
 alias ts="tmuxinator start"
 alias code="code-insiders"
+
+alias nosleep="systemd-inhibit sleep infinity"

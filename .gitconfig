@@ -1,0 +1,42 @@
+[includeIf "gitdir:/home/raspreet/"]
+    path = ~/.gitconfig-raspreet
+
+[branch]
+    sort = -committerdate
+
+[column]
+    ui = auto
+
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
+
+[fetch]
+    prune = true
+    pruneTags = true
+
+[init]
+    defaultBranch = main
+
+[push]
+    autoSetupRemote = true
+    default = simple
+    followTags = true
+
+[rebase]
+    autoSquash = true
+    autoStash = true
+    updateRefs = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
+
+[tag]
+    sort = version.refname
+[safe]
+	directory = /shared/dotfiles
+[user]
+	name = Raspreet Singh
